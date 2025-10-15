@@ -1,7 +1,7 @@
 const express = require("express")
 const fs = require("fs")
 
-const data = JSON.parse(require("./api.json"))
+const data = require("./api.json")
 const visits = data.visits
 
 

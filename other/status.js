@@ -1,13 +1,16 @@
 const { ActivityType } = require('discord.js')
+const { getVisits } = require("../api/api")
 
 function handleStatus(client) {
     client.user.setPresence({ 
-    activities: [{ 
-        name: '⏱️ Waiting for something', 
-        type: ActivityType.Listening, 
-    }], 
-    status: 'online' 
-})
+        activities: [{ 
+            name: `${getVisits()} visits`, 
+            type: ActivityType.Watching, 
+        }], 
+        status: 'online' 
+    })
+
+    setTimeout(() => handleStatus(client), 60_000)
 }
 
 module.exports = handleStatus
