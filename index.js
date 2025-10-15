@@ -3,6 +3,7 @@ const { token, channels } = require("./config.json")
 const fs = require("node:fs");
 
 require("./deploy-commands.js")
+require("./wakeup.js")
 
 const client = new Client({
     intents: [
