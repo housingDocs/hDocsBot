@@ -1,0 +1,172 @@
+{
+    "format": {
+        "colors": [
+            {"code": "&0", "name": "Black"},
+            {"code": "&1", "name": "Dark Blue"},
+            {"code": "&2", "name": "Dark Green"},
+            {"code": "&3", "name": "Dark Aqua"},
+            {"code": "&4", "name": "Dark Red"},
+            {"code": "&5", "name": "Dark Purple"},
+            {"code": "&6", "name": "Gold"},
+            {"code": "&7", "name": "Gray"},
+            {"code": "&8", "name": "Dark Gray"},
+            {"code": "&9", "name": "Blue"},
+            {"code": "&a", "name": "Green"},
+            {"code": "&b", "name": "Aqua"},
+            {"code": "&c", "name": "Red"},
+            {"code": "&d", "name": "Light Purple"},
+            {"code": "&e", "name": "Yellow"},
+            {"code": "&f", "name": "White"}
+        ],
+        "format": [
+            {"code": "&k", "name": "Obfuscated"},
+            {"code": "&l", "name": "**Bold**"},
+            {"code": "&m", "name": "~~Strikethrough~~"},
+            {"code": "&n", "name": "__Underlined__"},
+            {"code": "&o", "name": "*Italic*"},
+            {"code": "&r", "name": "Reset"}
+        ]
+    },
+    "dataValues": {
+        "6-Sided Logs": [
+            { "name": "Oak Log", "value": 12 },
+            { "name": "Spruce Log", "value": 13 },
+            { "name": "Birch Log", "value": 14 },
+            { "name": "Jungle Log", "value": 15 },
+            { "name": "Acacia Log", "value": 12 },
+            { "name": "Dark Oak Log", "value": 13 }
+        ],
+
+        "2-Headed Beds": [
+            { "name": "2-Headed Bed (south)", "value": 10 },
+            { "name": "2-Headed Bed (west)", "value": 11 },
+            { "name": "2-Headed Bed (north)", "value": 12 },
+            { "name": "2-Headed Bed (east)", "value": 13 }
+        ],
+
+        "Damaged Anvils": [
+            { "name": "Damaged Anvil (Z-Axis)", "value": 4 },
+            { "name": "Damaged Anvil (X-Axis)", "value": 5 },
+            { "name": "Very Damaged Anvil (Z-Axis)", "value": 8 },
+            { "name": "Very Damaged Anvil (X-Axis)", "value": 9 }
+        ],
+
+        "Slabs": [
+            { "name": "Top-Slab (Stone)", "value": 8 },
+            { "name": "Top-Slab (Sandstone)", "value": 9 },
+            { "name": "Top-Slab (Cobblestone)", "value": 11 },
+            { "name": "Top-Slab (Quartz)", "value": 15 }
+        ],
+
+        "Insta-Pistons": [
+            { "name": "Insta-Piston (Down)", "value": 8 },
+            { "name": "Insta-Piston (Up)", "value": 9 },
+            { "name": "Insta-Piston (North)", "value": 10 },
+            { "name": "Insta-Piston (South)", "value": 11 },
+            { "name": "Insta-Piston (West)", "value": 12 },
+            { "name": "Insta-Piston (East)", "value": 13 }
+        ],
+
+        "Double-Top Doors": [
+            { "name": "Iron Door", "value": 8 },
+            { "name": "Oak Door", "value": 8 },
+            { "name": "Spruce Door", "value": 8 },
+            { "name": "Birch Door", "value": 8 },
+            { "name": "Jungle Door", "value": 8 },
+            { "name": "Acacia Door", "value": 8 },
+            { "name": "Dark Oak Door", "value": 8 }
+        ],
+
+        "Torches & Levers": [
+            { "name": "Leaning Torch (West)", "value": 1 },
+            { "name": "Leaning Torch (East)", "value": 2 },
+            { "name": "Leaning Torch (North)", "value": 3 },
+            { "name": "Leaning Torch (South)", "value": 4 },
+            { "name": "Disappearing Redstone Torch", "value": 1 },
+            { "name": "Leaning Lever (West)", "value": 1 },
+            { "name": "Leaning Lever (East)", "value": 2 },
+            { "name": "Leaning Lever (North)", "value": 3 },
+            { "name": "Leaning Lever (South)", "value": 4 }
+        ],
+
+        "Powered Pressure Plates": [
+            { "name": "Wooden", "value": 1 },
+            { "name": "Stone", "value": 1 },
+            { "name": "Light Weighted", "value": 1 },
+            { "name": "Heavy Weighted", "value": 1 }
+        ],
+
+        "Floating Ladders": [
+            { "name": "Floating Ladder (South)", "value": 1 },
+            { "name": "Floating Ladder (North)", "value": 3 },
+            { "name": "Floating Ladder (East)", "value": 4 },
+            { "name": "Floating Ladder (West)", "value": 5 }
+        ],
+
+        "Leaning Buttons": [
+            { "name": "Leaning Stone Button (West)", "value": 1 },
+            { "name": "Leaning Stone Button (East)", "value": 2 },
+            { "name": "Leaning Stone Button (North)", "value": 3 },
+            { "name": "Leaning Stone Button (South)", "value": 4 }
+        ],
+
+        "Snow Layers": [
+            { "name": "Snow Layer 2", "value": 2 },
+            { "name": "Snow Layer 3", "value": 3 },
+            { "name": "Snow Layer 4", "value": 4 },
+            { "name": "Snow Layer 5", "value": 5 },
+            { "name": "Snow Layer 6", "value": 6 },
+            { "name": "Snow Layer 7", "value": 7 }
+        ],
+
+        "Trapdoors": [
+            { "name": "Open Trapdoor (South)", "value": 4 },
+            { "name": "Open Trapdoor (North)", "value": 5 },
+            { "name": "Open Trapdoor (East)", "value": 6 },
+            { "name": "Open Trapdoor (West)", "value": 7 },
+            { "name": "Top Trapdoor (Wooden)", "value": 8 },
+            { "name": "Bottom Iron Trapdoor", "value": 1 },
+            { "name": "Top Iron Trapdoor", "value": 8 }
+        ],
+
+        "Floating Vines": [
+            { "name": "Single (South)", "value": 1 },
+            { "name": "Single (West)", "value": 2 },
+            { "name": "Single (North)", "value": 4 },
+            { "name": "Single (East)", "value": 8 },
+            { "name": "Double (S+W)", "value": 3 },
+            { "name": "Double (S+N)", "value": 5 },
+            { "name": "Double (S+E)", "value": 9 },
+            { "name": "Double (W+E)", "value": 10 },
+            { "name": "Double (W+N)", "value": 6 },
+            { "name": "Double (N+E)", "value": 12 },
+            { "name": "Triple (S+W+N)", "value": 7 },
+            { "name": "Triple (S+W+E)", "value": 11 },
+            { "name": "Triple (S+N+E)", "value": 13 },
+            { "name": "Triple (W+N+E)", "value": 14 },
+            { "name": "Quadruple", "value": 15 }
+        ],
+
+        "Floating Tripwires": [
+            { "name": "Floating Tripwire (North)", "value": 0 },
+            { "name": "Floating Tripwire (East)", "value": 1 },
+            { "name": "Floating Tripwire (South)", "value": 2 },
+            { "name": "Floating Tripwire (West)", "value": 3 },
+            { "name": "Active-Floating Tripwire (North)", "value": 4 },
+            { "name": "Active-Floating Tripwire (East)", "value": 5 },
+            { "name": "Active-Floating Tripwire (South)", "value": 6 },
+            { "name": "Active-Floating Tripwire (West)", "value": 7 }
+        ],
+
+        "Miscellaneous": [
+            { "name": "Dead Bush (Anywhere, apply to Grass/Fern)", "value": 3 },
+            { "name": "Filled Brewing Stand", "value": 7 },
+            { "name": "Filled End Portal Frame", "value": 5 },
+            { "name": "TNT (Ignite-On-Hit)", "value": 1 },
+            { "name": "2-Peony Stacked", "value": 15 },
+            { "name": "Full Jukebox", "value": 1 },
+            { "name": "Open Fence-Gate", "value": 4 },
+            { "name": "Mushroom Stem (on Red Mushroom)", "value": 15 }
+        ]
+    }
+}
