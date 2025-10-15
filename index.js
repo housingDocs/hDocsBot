@@ -3,7 +3,7 @@ const { token, channels } = require("./config.json")
 const fs = require("node:fs");
 
 require("./deploy-commands.js")
-require("./wakeup.js")
+require("./api/api.js")
 
 const client = new Client({
     intents: [
@@ -34,6 +34,8 @@ client.once(Events.ClientReady, (c) => {
 
     client.logChannel = client.channels.cache.get(channels.log)
     client.welcomeChannel = client.channels.cache.get(channels.welcome)
+
+    require("./other/status.js")(client)
     
     setTimeout(loopLog, 30_000)
 });
