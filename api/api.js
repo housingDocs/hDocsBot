@@ -2,7 +2,7 @@ const express = require("express")
 const fs = require("fs")
 
 const data = require("./api.json")
-const visits = data.visits
+let visits = data.visits
 
 
 
@@ -16,13 +16,8 @@ app.get("/wakeup", (req, res) => {
 })
 
 app.get("/visit", (req, res) => {
-    try {
-        visits++
-        res.send("ok")
-    } catch(e) {
-        console.log(e)
-        res.send(e)
-    }
+    visits++
+    res.send("ok")
 })
 
 app.listen(PORT, () => {
