@@ -3,7 +3,7 @@ const express = require("express")
 const app = express()
 const PORT = 3000
 
-const URL = ""
+const URL = "https://hdocsbot.onrender.com"
 
 app.get("/wakeup", (req, res) => {
     
