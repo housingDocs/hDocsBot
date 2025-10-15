@@ -20,7 +20,7 @@ app.get("/visit", (req, res) => {
         visits++
         res.send("ok")
     } catch(e) {
-        console.log(e)
+        res.send(e)
     }
 })
 
