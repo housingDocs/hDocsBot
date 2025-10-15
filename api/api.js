@@ -2,8 +2,6 @@ const express = require("express")
 const fs = require("fs")
 
 const data = require("./api.json")
-let visits = data.visits
-
 
 
 const app = express()
@@ -16,7 +14,7 @@ app.get("/wakeup", (req, res) => {
 })
 
 app.get("/visit", (req, res) => {
-    visits++
+    data.visits++
     res.send("ok")
 })
 
@@ -24,14 +22,14 @@ app.listen(PORT, () => {
     console.log("wakeup running")
 })
 
-function loop() {
+async function loop() {
     fetch(`${URL}/wakeup`)
-    fs.writeFileSync("./api.json", JSON.stringify(data))
+    fs.writeFileSync("./api/api.json", JSON.stringify(data))
     setTimeout(() => loop(), 60_000)
 }
 
 function getVisits() {
-    return visits
+    return data.visits
 }
 
 setTimeout(() => loop(), 60_000)
