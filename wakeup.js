@@ -6,7 +6,7 @@ const PORT = 3000
 const URL = "https://hdocsbot.onrender.com"
 
 app.get("/wakeup", (req, res) => {
-    
+    res.send("wake")
 })
 
 app.listen(PORT, () => {
