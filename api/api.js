@@ -16,8 +16,12 @@ app.get("/wakeup", (req, res) => {
 })
 
 app.get("/visit", (req, res) => {
-    visits++
-    res.send("ok")
+    try {
+        visits++
+        res.send("ok")
+    } catch(e) {
+        console.log(e)
+    }
 })
 
 app.listen(PORT, () => {
