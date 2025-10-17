@@ -1,8 +1,9 @@
 const express = require("express")
 const fs = require("fs")
 
-const data = require("./api.json")
-
+let data = {
+    visits: 0
+}
 
 const app = express()
 const PORT = 3000
@@ -22,18 +23,30 @@ app.listen(PORT, () => {
     console.log("wakeup running")
 })
 
-async function loop() {
+async function loop(message) {
     fetch(`${URL}/wakeup`)
-    fs.writeFileSync("./api/api.json", JSON.stringify(data))
-    setTimeout(() => loop(), 60_000)
+
+    message.edit(JSON.stringify(data))
+
+    setTimeout(() => loop(message), 60_000)
+}
+
+async function start(client) {
+
+    const channel = client.channels.cache.get('1428736541693579366')
+    const message = (await channel.messages.fetch({ limit: 1 })).first()
+
+    data = JSON.parse(message.content)
+
+    setTimeout(() => loop(message), 60_000)
 }
 
 function getVisits() {
     return data.visits
 }
 
-setTimeout(() => loop(), 60_000)
 
 module.exports = {
+    start,
     getVisits
 }
