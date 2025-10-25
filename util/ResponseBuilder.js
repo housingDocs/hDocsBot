@@ -1,7 +1,7 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js")
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Embed } = require("discord.js")
 
 const { colors, format } = require("./data.json").format
-const { dataValues } = require("./data.json")
+const { dataValues, blockIds } = require("./data.json")
 
 class ResponseBuilder {
 
@@ -97,8 +97,8 @@ class ResponseBuilder {
             let values = ""
 
             for (const { name, value } of content) {
-                names += `${name}\n`
-                values += `\`${value}\`\n`
+                names += name + "\n"
+                values += value + "\n"
             }
 
             fields.push(
@@ -130,6 +130,29 @@ class ResponseBuilder {
         )
 
         return embeds
+    }
+
+    static blockIds(search = "") {
+        let blocks = ""
+        let ids = ""
+
+        for (const b of blockIds) {
+            if (b.name.toLowerCase().includes(search)) {
+                blocks += b.name + "\n"
+                ids += b.id + "\n"
+            }
+        }
+
+        const embed = new EmbedBuilder()
+            .setTitle("Block IDs")
+            .setDescription("List of all block IDs\nFull article [here](https://housingdocs.github.io/html/Housing_Menu/Block_IDs.html)") // TODO
+            .addFields([
+                { name: "Block", value: blocks, inline: true },
+                { name: "ID", value: ids, inline: true },
+                { name: "\u200B", value: "\u200B", inline: true }
+            ])
+        
+        return this.postProcess(embed)
     }
 
     static postProcess(embed) {
