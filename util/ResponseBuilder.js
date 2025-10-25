@@ -143,6 +143,10 @@ class ResponseBuilder {
             }
         }
 
+        if (blocks.length === 0) {
+            return this.error(`No results found for search "${search}". View the full list [here](https://housingdocs.github.io/html/Housing_Menu/Block_IDs.html)`)
+        }
+
         const embed = new EmbedBuilder()
             .setTitle("Block IDs")
             .setDescription("List of all block IDs\nFull article [here](https://housingdocs.github.io/html/Housing_Menu/Block_IDs.html)") // TODO
