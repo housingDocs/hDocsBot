@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require("discord.js")
+const { SlashCommandBuilder, MessageFlags } = require("discord.js")
 const ResponseBuilder = require("../util/ResponseBuilder")
 
 module.exports = {
