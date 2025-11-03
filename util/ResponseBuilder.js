@@ -159,6 +159,24 @@ class ResponseBuilder {
         return this.postProcess(embed)
     }
 
+    static topRatedPages(data) {
+        const embed = new EmbedBuilder()
+            .setTitle("Top rated Pages")
+            .setDescription("View a list of the top rated pages")
+
+        const fields = [
+            { name: "Page", value: "", inline: true },
+            { name: "Rating", value: "", inline: true }
+        ]
+
+        data.forEach(d => {
+            fields[0].value += d.name + "\n"
+            fields[1].value += d.rating + "\n"
+        })
+
+        return this.postProcess(embed.addFields(fields))
+    }
+
     static postProcess(embed) {
         embed.setColor("#6341e0")
         embed.setFooter({

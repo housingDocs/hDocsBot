@@ -1,6 +1,9 @@
-const { Client, Events, GatewayIntentBits, ActionRowBuilder, ButtonBuilder, Collection } = require("discord.js");
+const { Client, Events, GatewayIntentBits, Collection } = require("discord.js");
 const { token, channels } = require("./config.json")
-const fs = require("node:fs");
+const fs = require("node:fs")
+const DBClient = require("./db/DBClient.js")
+
+const db = new DBClient()
 
 require("./deploy-commands.js")
 
@@ -56,7 +59,7 @@ client.on(Events.InteractionCreate, (interaction) => {
 
         try{
             if(interaction.replied) return;
-            command.execute({ interaction, client });
+            command.execute({ interaction, client, db });
         } catch (error) {
             console.error(error);
         }
