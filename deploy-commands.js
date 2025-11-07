@@ -29,6 +29,7 @@ const localFiles = getFiles("./commands/local")
 const globalFiles = getFiles("./commands/global")
 
 console.log(localFiles)
+console.log(globalFiles)
 
 for (const file of localFiles) {
     const command = require(file)
