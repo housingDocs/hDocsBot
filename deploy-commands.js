@@ -45,7 +45,7 @@ rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: localComman
     .then(() => console.log("Build local commands succesfully!"))
     .catch(console.error)
 
-rest.put(Routes.applicationGuildCommands(clientId), { body: globalCommands })
+rest.put(Routes.applicationCommands(clientId), { body: globalCommands })
     .then(() => console.log("Build global commands succesfully!"))
     .catch(console.error)
 
