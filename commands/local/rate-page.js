@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, MessageFlags } = require("discord.js")
-const ResponseBuilder = require("../util/ResponseBuilder")
+const ResponseBuilder = require("../../util/ResponseBuilder")
 
 const PAGES = Object.freeze({
 

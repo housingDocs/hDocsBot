@@ -22,19 +22,31 @@ function getFiles(dir) {
     return commandFiles;
 }
 
-let commands = [];
-const commandFiles = getFiles("./commands")
+let localCommands = []
+let globalCommands = []
 
-console.log(commandFiles)
+const localFiles = getFiles("./commands/local")
+const globalFiles = getFiles("./commands/global")
 
-for (const file of commandFiles) {
-    const command = require(file);
-    commands.push(command.data.toJSON());
+console.log(localFiles)
+
+for (const file of localFiles) {
+    const command = require(file)
+    localCommands.push(command.data.toJSON())
+}
+
+for (const file of globalFiles) {
+    const command = require(file)
+    globalCommands.push(command.data.toJSON())
 }
 
 const rest =  new REST({ version: "10" }).setToken(token);
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
-    .then(() => console.log("Build commands succesfully!"))
-    .catch(console.error);
+rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: localCommands })
+    .then(() => console.log("Build local commands succesfully!"))
+    .catch(console.error)
+
+rest.put(Routes.applicationGuildCommands(clientId), { body: globalCommands })
+    .then(() => console.log("Build global commands succesfully!"))
+    .catch(console.error)
 
 module.exports = {}
