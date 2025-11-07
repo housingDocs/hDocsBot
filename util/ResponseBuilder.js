@@ -147,6 +147,10 @@ class ResponseBuilder {
             return this.error(`No results found for search "${search}". View the full list [here](https://housingdocs.github.io/html/Housing_Menu/Block_IDs.html)`)
         }
 
+        if (blocks.length > 1024 || ids.length > 1024) {
+            return this.error(`The search "${search}" is too broad and will result in a giant response. Please search for something more specific.`)
+        }
+
         const embed = new EmbedBuilder()
             .setTitle("Block IDs")
             .setDescription("List of all block IDs\nFull article [here](https://housingdocs.github.io/html/Housing_Menu/Block_IDs.html)") // TODO
