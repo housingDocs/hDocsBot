@@ -1,7 +1,7 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, Embed } = require("discord.js")
 
 const { colors, format } = require("./data.json").format
-const { dataValues, blockIds } = require("./data.json")
+const { dataValues, blockIds, commands } = require("./data.json")
 
 class ResponseBuilder {
 
@@ -179,6 +179,21 @@ class ResponseBuilder {
         })
 
         return this.postProcess(embed.addFields(fields))
+    }
+
+    static help() {
+        const globalEmbed = new EmbedBuilder()
+            .setTitle("Global Bot Commands")
+            .setDescription("List of all commands this bot has")
+        
+        const localEmbed = new EmbedBuilder()
+            .setTitle("Local Bot Commands")
+            .setDescription("List of all commands this bot has (usable only in the [hDocs](https://discord.gg/qRvcDc3vz5) discord server)")
+        
+        globalEmbed.addFields(commands.global.map(([name, value]) => ({name: `\`/${name}\``, value})))
+        localEmbed.addFields(commands.local.map(([name, value]) => ({name: `\`/${name}\``, value})))
+
+        return [globalEmbed, localEmbed].map((e) => this.postProcess(e))
     }
 
     static postProcess(embed) {

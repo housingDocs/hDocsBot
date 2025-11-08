@@ -425,5 +425,20 @@
         { "name": "Jungle Door", "id": "429:0" },
         { "name": "Acacia Door", "id": "430:0" },
         { "name": "Dark Oak Door", "id": "431:0" }
-    ]
+    ],
+
+    "commands": {
+        "local": [
+            ["ping", "Pings the bot"],
+            ["rate-page [category] <page> <rating>", "Rate a page 1 through 5"],
+            ["top-pages <amount>", "Displays the top `<amount>` rated pages"]
+        ],
+
+        "global": [
+            ["block-ids <search>", "Displays a list of blocks containing `<search>` with their respective [block ids](https://housingdocs.github.io/html/Housing_Menu/Block_IDs.html) (used in [Protools](https://housingdocs.github.io/html/Housing_Menu/Pro_Tools.html))"],
+            ["data-values <search>", "Displays a list of data-driven blocks containing `<search>` with their respective [Data Value](https://housingdocs.github.io/html/General_Housing/Data_Values.html)"],
+            ["format-codes <display>", "Displays housing's [Formatting Codes](https://housingdocs.github.io/html/General_Housing/Formatting_Codes.html): Only color codes, only format codes or all"],
+            ["help", "Displays a list of commands with a description"]
+        ]
+    }
 }
